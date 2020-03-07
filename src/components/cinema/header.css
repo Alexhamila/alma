@@ -1,0 +1,36 @@
+/* 300 Light 400 Regular 700 Bold */
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+  }
+  .bg-custom {
+    background-color: transparent;
+  }
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 24px;
+  }
+  .active a {
+    font-weight: 400;
+  }
+  .menu-ul {
+<<<<<<< HEAD
+=======
+    padding-top: 9px;
+>>>>>>> Update Affiche
+  }
+  .menu-il {
+  }
+  .menu-a {
+    font-size: 18px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+  .menu-choice{
+    font-weight: 300;
+    font-size: 1em;
+    opacity: 0.7;
+  }
+  #menu-chosen{
+    opacity: 1;
+  }
