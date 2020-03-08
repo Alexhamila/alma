@@ -127,7 +127,7 @@ const AfficheCinema = ({ data }) =>  {
               };
 
               return(
-                <div className="background-cinema" style={background_gradient}>
+                <div className="background-cinema" style={background_gradient2}>
                 <div className="background-cinema-img" style={img_1}>
                     <div
                     className="modal fade"
