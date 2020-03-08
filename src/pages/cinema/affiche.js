@@ -6,20 +6,6 @@ import { graphql } from "gatsby"
 import "../../components/cinema/index.css"
 import HeaderCinema from "../../components/headercinema"
 
-var imgUrl_2 = "/images/158090684095061065.png";
-const img_2 = {
-  backgroundImage: 'url("' + imgUrl_2 + '")'
-};
-const background_gradient = {
-  background: "#373b44",
-  background: "-webkit-linear-gradient(to right,#005c97,#363795)",
-  background: "linear-gradient(to right,#005c97,#363795)"
-};
-const background_gradient2 = {
-  background: "#373b44",
-  background: "-webkit-linear-gradient(to right,#0f0c29,#403e4f,#24243e)",
-  background: "linear-gradient(to right,#0f0c29,#403e4f,#24243e)"
-};
 
 const AfficheCinema = ({ data }) =>  {
   return(
@@ -38,7 +24,7 @@ const AfficheCinema = ({ data }) =>  {
                 backgroundImage: 'url("' + imgUrl_1 + '")'
               };
              return(
-            <div className="background-cinema" style={background_gradient}>
+            <div className="background-cinema" style={{background: document.node.Couleur}}>
             <div className="background-cinema-img" style={img_1}>
             <HeaderCinema active="2" />
                 <div
@@ -127,7 +113,7 @@ const AfficheCinema = ({ data }) =>  {
               };
 
               return(
-                <div className="background-cinema" style={background_gradient2}>
+                <div className="background-cinema" style={{background: document.node.Couleur}}>
                 <div className="background-cinema-img" style={img_1}>
                     <div
                     className="modal fade"
@@ -237,6 +223,7 @@ export const query = graphql`
           AfficheFond{
             publicURL
           }
+          Couleur
         }
       }
     }
