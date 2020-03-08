@@ -32,7 +32,7 @@ const AfficheCinema = ({ data }) =>  {
               console.log(index);
               if(index == 0){
 
-              var imgUrl_1 = document.node.Affiche.publicURL;
+              var imgUrl_1 = document.node.AfficheFond.publicURL;
 
               const img_1 = {
                 backgroundImage: 'url("' + imgUrl_1 + '")'
@@ -63,11 +63,11 @@ const AfficheCinema = ({ data }) =>  {
                     </div>
                     <div className="modal-body">
                         <iframe
-                        src="https://www.youtube-nocookie.com/embed/pHgwf2eMFnA"
+                        src={document.node.Lien}
                         frameBorder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
-                        title="Trailer Star Wars IX"
+                        title="Trailer"
                         className="video"
                         />
                     </div>
@@ -120,7 +120,7 @@ const AfficheCinema = ({ data }) =>  {
              );
             }else{
               
-              var imgUrl_1 = document.node.Affiche.publicURL;
+              var imgUrl_1 = document.node.AfficheFond.publicURL;
 
               const img_1 = {
                 backgroundImage: 'url("' + imgUrl_1 + '")'
@@ -151,11 +151,11 @@ const AfficheCinema = ({ data }) =>  {
                         </div>
                         <div className="modal-body">
                             <iframe
-                            src="https://www.youtube-nocookie.com/embed/pHgwf2eMFnA"
+                            src={document.node.Lien}
                             frameBorder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
-                            title="Trailer Star Wars IX"
+                            title="Trailer"
                             className="video"
                             />
                         </div>
@@ -232,6 +232,9 @@ export const query = graphql`
           Description2
           Lien
           Affiche{
+            publicURL
+          }
+          AfficheFond{
             publicURL
           }
         }
