@@ -34,10 +34,10 @@ const IndexPage = ({ data }) => (
       <div class="row">
         <div class="col-lg-6 mb-4">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="https://almaclindoeilfm.org/sites/default/files/P1000711.JPG" alt=""/></a>
+            <a href="/radio/"><img class="card-img-top" src="https://almaclindoeilfm.org/sites/default/files/P1000711.JPG" alt=""/></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Clin d'Oeil FM</a>
+                <a href="/radio/">Clin d'Oeil FM</a>
               </h4>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
             </div>
@@ -45,10 +45,10 @@ const IndexPage = ({ data }) => (
         </div>
         <div class="col-lg-6 mb-4">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="https://scontent-mrs2-1.xx.fbcdn.net/v/t1.0-9/p720x720/86860265_3081372301984256_4067747978259988480_o.jpg?_nc_cat=109&_nc_ohc=_Eyxdy-dF68AX8iUeNF&_nc_ht=scontent-mrs2-1.xx&_nc_tp=6&oh=5693d7d23f65398f58268c4655226dc7&oe=5EFE1E34" alt=""/></a>
+            <a href="/cinema/"><img class="card-img-top" src="https://scontent-mrs2-1.xx.fbcdn.net/v/t1.0-9/p720x720/86860265_3081372301984256_4067747978259988480_o.jpg?_nc_cat=109&_nc_ohc=_Eyxdy-dF68AX8iUeNF&_nc_ht=scontent-mrs2-1.xx&_nc_tp=6&oh=5693d7d23f65398f58268c4655226dc7&oe=5EFE1E34" alt=""/></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Cinéma Alma</a>
+                <a href="/cinema">Cinéma Alma</a>
               </h4>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquam aperiam nulla perferendis dolor nobis numquam, rem expedita, aliquid optio, alias illum eaque. Non magni, voluptates quae, necessitatibus unde temporibus.</p>
             </div>
