@@ -5,38 +5,38 @@ import { PlayButton, Timer, VolumeControl } from 'react-soundplayer/components';
 import { Progress, Icons } from 'react-soundplayer/components';
 import { SoundPlayerContainer } from 'react-soundplayer/addons';
 import { withCustomAudio } from 'react-soundplayer/addons';
+import "../components/radio/basscss.css";
+
 // audio source
 const streamUrl = 'http://clindoeilfm1061.ice.infomaniak.ch/clindoeilfm1061-128.mp3';
 // some track meta information
 const trackTitle = "Clin d'Oeil FM";
 
 const BackgroundSoundPlayer = withCustomAudio(props => {
-  const { track, duration, currentTime } = props;
     return (
-      <div className="py2 white bg-cover bg-top rounded relative" style={{backgroundImage: `url("https://almaclindoeilfm.org/sites/default/files/P1000711.JPG")`}}>
-        <div className="bg-black absolute top-0 right-0 left-0 bottom-0 muted" />
-        <div className="center py4 relative z1">
-          <h3 className="h4 nowrap caps mb0"></h3>
-          <h2 className="h0 nowrap caps m0"></h2>
-        </div>
-        <div className="flex flex-center px2 relative z1">
-          <PlayButton
-            className="flex-none h2 mr2 button button-transparent button-grow rounded"
-            {...props} />
-          <VolumeControl
-            className='mr2 flex flex-center'
-            buttonClassName="flex-none h2 button button-transparent button-grow rounded"
-            rangeClassName="custom-track-bg"
-            {...props} />
+      <div className="p2 border navy mt1 mb3 flex flex-center rounded">
+      <PlayButton
+        className="sb-soundplayer-play-btn flex-none h4 mr2 button white button-big button-outline button-grow bg-orange circle"
+        {...props} />
+        
+        <div className="no-flex">
+          <h2 classnName="h4 nowrap m0"></h2>
+          <h2 classnName="h4 nowrap caps m0"></h2>
           <Progress
-            className="flex-auto bg-darken-3 rounded"
-            innerClassName="rounded-left bg-white"
-            value={(currentTime / duration) * 100 || 0}
-            {...props} />
-        </div>
+            className="mt1 mb1 rounded"
+            {...props}
+          />
       </div>
-  );
+
+    </div>
+    );
 });
+
+/*          <VolumeControl
+          className='flex flex-center mr2'
+          buttonClassName="flex-none h4 button button-transparent button-grow rounded"
+          {...props} />
+          */
 
 const HeaderRadio = ({ active }) => (
   <header>

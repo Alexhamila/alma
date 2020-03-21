@@ -2,6 +2,9 @@
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 100vh;
   }
+  .rounded {
+    border-radius: 3px;
+}
   .sb-soundplayer-icon {
     width: 1em;
     height: 1em;
@@ -189,6 +192,13 @@
   .sb-soundplayer-volume-range::-ms-fill-lower {
     background: #FC561E;
   }
+
+
+@keyframes blink {
+ 0% { opacity: 0.1; }
+ 30% { opacity: 1; }
+ 100% { opacity: 0.1; }
+}
   .sketch {
     position: relative;
     height: 400px;
