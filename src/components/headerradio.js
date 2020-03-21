@@ -1,6 +1,22 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import ReactDOM from 'react-dom';
+import { PlayButton, Timer } from 'react-soundplayer/components';
+import { Progress, Icons } from 'react-soundplayer/components';
+import { SoundPlayerContainer } from 'react-soundplayer/addons';
+// it's just an alias for `withSoundCloudAudio` but makes code clearer
+import { withCustomAudio } from 'react-soundplayer/addons';
+// audio source
+const streamUrl = 'http://clindoeilfm1061.ice.infomaniak.ch/clindoeilfm1061-128.mp3';
+// some track meta information
+const trackTitle = "Clin d'Oeil FM";
+
+const AWSSoundPlayer = withCustomAudio(props => {
+  return (
+      <PlayButton {...props}/>
+  );
+});
 
 const HeaderRadio = ({ active }) => (
   <header>
@@ -64,16 +80,13 @@ const HeaderRadio = ({ active }) => (
             </li>
           </ul>
           <span className="navbar-text">
-            <a className="menu-choice" id="menu-chosen" href="/radio">RADIO</a> | <a className="menu-choice" href="/cinema">CINEMA</a>
-          </span>
+          Ecoutez en live: <AWSSoundPlayer
+        streamUrl={streamUrl}
+        trackTitle={trackTitle} 
+        preloadType="auto" /> 
+            <a className="menu-choice" id="menu-chosen" href="/radio">RADIO</a> | <a className="menu-choice" href="/cinema">CINEMA</a></span>
       </div>
     </nav>
-    <div className="container-audio">
-              <audio controls  loop autoplay>
-                   <source src="http://clindoeilfm1061.ice.infomaniak.ch/clindoeilfm1061-128.mp3" type="audio/ogg"/>
-                   Your browser dose not Support the audio Tag
-               </audio>
-    </div>
   </header>
 )
 
