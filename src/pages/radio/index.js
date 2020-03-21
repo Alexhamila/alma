@@ -4,42 +4,7 @@ import SEO from "../../components/seo"
 import React from "react"
 import HeaderRadio from "../../components/headerradio";
 import "../../components/radio/index.css"
-import { PlayButton, Timer, VolumeControl } from 'react-soundplayer/components';
-import { Progress, Icons } from 'react-soundplayer/components';
-import { SoundPlayerContainer } from 'react-soundplayer/addons';
-import { withCustomAudio } from 'react-soundplayer/addons';
-// audio source
-const streamUrl = 'http://clindoeilfm1061.ice.infomaniak.ch/clindoeilfm1061-128.mp3';
-// some track meta information
-const trackTitle = "Clin d'Oeil FM";
 
-const BackgroundSoundPlayer = withCustomAudio(props => {
-  const { track, duration, currentTime } = this.props;
-    return (
-      <div className="py2 white bg-cover bg-top rounded relative">
-        <div className="bg-black absolute top-0 right-0 left-0 bottom-0 muted" />
-        <div className="center py4 relative z1">
-          <h3 className="h4 nowrap caps mb0">{track ? track.user.username : ''}</h3>
-          <h2 className="h0 nowrap caps m0">{track ? track.title : ''}</h2>
-        </div>
-        <div className="flex flex-center px2 relative z1">
-          <PlayButton
-            className="flex-none h2 mr2 button button-transparent button-grow rounded"
-            {...this.props} />
-          <VolumeControl
-            className='mr2 flex flex-center'
-            buttonClassName="flex-none h2 button button-transparent button-grow rounded"
-            rangeClassName="custom-track-bg"
-            {...this.props} />
-          <Progress
-            className="flex-auto bg-darken-3 rounded"
-            innerClassName="rounded-left bg-white"
-            value={(currentTime / duration) * 100 || 0}
-            {...this.props} />
-        </div>
-      </div>
-  );
-});
 
 const IndexRadio = ({ data }) =>  {
   return(
