@@ -3,13 +3,14 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Footer from "../components/footer";
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Accueil" />
-    <nav class="navbar navbar-expand-lg navbar-dark shadow fixed-top" style={{backgroundColor: "#1F1E29"}}>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow" style={{backgroundColor: "#1F1E29"}}>
       <div class="container">
-        <a class="navbar-brand" href="#">Alma</a>
+        <a class="navbar-brand" href="/">Alma</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -34,7 +35,7 @@ const IndexPage = ({ data }) => (
       <div class="row">
         <div class="col-lg-6 mb-4">
           <div class="card h-100">
-            <a href="/radio/"><img class="card-img-top" src="https://almaclindoeilfm.org/sites/default/files/P1000711.JPG" alt=""/></a>
+            <a href="/radio/"><img class="card-img-top" src="https://res.cloudinary.com/almaciv/image/upload/v1584807478/Webp.net-resizeimage_p973o6.png" alt=""/></a>
             <div class="card-body">
               <h4 class="card-title">
                 <a href="/radio/">Clin d'Oeil FM</a>
@@ -45,7 +46,7 @@ const IndexPage = ({ data }) => (
         </div>
         <div class="col-lg-6 mb-4">
           <div class="card h-100">
-            <a href="/cinema/"><img class="card-img-top" src="https://scontent-mrs2-1.xx.fbcdn.net/v/t1.0-9/p720x720/86860265_3081372301984256_4067747978259988480_o.jpg?_nc_cat=109&_nc_ohc=_Eyxdy-dF68AX8iUeNF&_nc_ht=scontent-mrs2-1.xx&_nc_tp=6&oh=5693d7d23f65398f58268c4655226dc7&oe=5EFE1E34" alt=""/></a>
+            <a href="/cinema/"><img class="card-img-top" src="https://res.cloudinary.com/almaciv/image/upload/v1583618131/dhyrfdgycpysx4vtou1u.jpg" alt=""/></a>
             <div class="card-body">
               <h4 class="card-title">
                 <a href="/cinema">Cinéma Alma</a>
@@ -56,6 +57,7 @@ const IndexPage = ({ data }) => (
         </div>
       </div>
     </div>
+    <Footer />
   </Layout>
 )
 export default IndexPage

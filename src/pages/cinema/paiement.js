@@ -6,6 +6,7 @@ import { graphql } from "gatsby"
 import "../../components/cinema/index.css"
 import HeaderCinema from "../../components/headercinema"
 import ReactMarkdown from "react-markdown"  
+import Footer from "../../components/footer";
 
 var imgUrl_1 = "/images/15817814522790644.png";
     const img_1 = {
@@ -55,6 +56,7 @@ const PaiementCinema = ({ data }) =>  {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     </Layout>
   )

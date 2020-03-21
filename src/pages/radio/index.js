@@ -1,16 +1,17 @@
-
+import { Link } from "gatsby"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import React from "react"
 import HeaderRadio from "../../components/headerradio";
 import "../../components/radio/index.css"
+import Footer from "../../components/footer";
 
 
 const IndexRadio = ({ data }) =>  {
   return(
-    <Layout header="radio">
+    <Layout>
     <SEO title="Accueil"></SEO> 
-    <div className="background-radio">
+      <div className="background-radio">
             <HeaderRadio active="1" ></HeaderRadio>
             <div className="jumbotron jumbotron-radio">
               <p className="jumbotron-title">Radio Clin d'Oeil FM</p>
@@ -41,6 +42,7 @@ const IndexRadio = ({ data }) =>  {
                 </div>
               </div>
             </div>
+            <Footer />
         </div>
     </Layout>
   )

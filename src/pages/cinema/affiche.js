@@ -5,11 +5,11 @@ import React from "react"
 import { graphql } from "gatsby"
 import "../../components/cinema/index.css"
 import HeaderCinema from "../../components/headercinema"
-
+import Footer from "../../components/footer";
 
 const AfficheCinema = ({ data }) =>  {
   return(
-    <Layout header="cinema">
+    <Layout>
         <SEO title="Accueil"></SEO>
         <div className="cinema">
           
@@ -194,6 +194,7 @@ const AfficheCinema = ({ data }) =>  {
                 );
            }
            })}
+        <Footer />
         </div>
     </Layout>
   )
