@@ -5,7 +5,6 @@ import { PlayButton, Timer, VolumeControl } from 'react-soundplayer/components';
 import { Progress, Icons } from 'react-soundplayer/components';
 import { SoundPlayerContainer } from 'react-soundplayer/addons';
 import { withCustomAudio } from 'react-soundplayer/addons';
-import "../components/radio/basscss.css";
 
 // audio source
 const streamUrl = 'http://clindoeilfm1061.ice.infomaniak.ch/clindoeilfm1061-128.mp3';
@@ -14,20 +13,10 @@ const trackTitle = "Clin d'Oeil FM";
 
 const BackgroundSoundPlayer = withCustomAudio(props => {
     return (
-      <div className="p2 border navy mt1 mb3 flex flex-center rounded">
+      <div className="background-dark">
       <PlayButton
-        className="sb-soundplayer-play-btn flex-none h4 mr2 button white button-big button-outline button-grow bg-orange circle"
+        className="sb-soundplayer-play-btn"
         {...props} />
-        
-        <div className="no-flex">
-          <h2 classnName="h4 nowrap m0"></h2>
-          <h2 classnName="h4 nowrap caps m0"></h2>
-          <Progress
-            className="mt1 mb1 rounded"
-            {...props}
-          />
-      </div>
-
     </div>
     );
 });
@@ -40,6 +29,7 @@ const BackgroundSoundPlayer = withCustomAudio(props => {
 
 const HeaderRadio = ({ active }) => (
   <header>
+    <BackgroundSoundPlayer streamUrl={streamUrl} ></BackgroundSoundPlayer>
     <nav className="navbar navbar-expand-lg navbar-light bg-custom">
         <a className="navbar-brand" href="/">
           Clin d'Oeil
@@ -103,7 +93,7 @@ const HeaderRadio = ({ active }) => (
             <a className="menu-choice" id="menu-chosen" href="/radio">RADIO</a> | <a className="menu-choice" href="/cinema">CINEMA</a></span>
       </div>
     </nav>
-    <BackgroundSoundPlayer streamUrl={streamUrl} ></BackgroundSoundPlayer>
+
   </header>
 )
 

@@ -1,10 +1,13 @@
-.background-radio {
+  .background-radio {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 100vh;
   }
+  .background-dark{
+    background-color: #1F1E29;
+  }
   .rounded {
     border-radius: 3px;
-}
+  }
   .sb-soundplayer-icon {
     width: 1em;
     height: 1em;
