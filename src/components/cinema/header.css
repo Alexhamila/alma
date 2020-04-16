@@ -31,3 +31,8 @@ body {
   #menu-chosen{
     opacity: 1;
   }
+  @media screen and (max-width: 1425px) {
+    .menu-a {
+      font-size: 12px;
+    }
+  }

@@ -9,9 +9,9 @@ import ReactMarkdown from "react-markdown"
 import Footer from "../../components/footer";
 
 var imgUrl_1 = "/images/158090689819369200.png";
-    const img_1 = {
-      backgroundImage: 'url("' + imgUrl_1 + '")'
-    };
+const img_1 = {
+  backgroundImage: 'url("' + imgUrl_1 + '")'
+};
 
 const background_gradient = {
   background: "#1F1E29"

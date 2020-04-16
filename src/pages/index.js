@@ -4,6 +4,25 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Footer from "../components/footer";
+import { PlayButton, Timer, VolumeControl } from 'react-soundplayer/components';
+import { Progress, Icons } from 'react-soundplayer/components';
+import { SoundPlayerContainer } from 'react-soundplayer/addons';
+import { withCustomAudio } from 'react-soundplayer/addons';
+
+// audio source
+const streamUrl = 'http://clindoeilfm1061.ice.infomaniak.ch/clindoeilfm1061-128.mp3';
+// some track meta information
+const trackTitle = "Clin d'Oeil FM";
+
+const BackgroundSoundPlayer = withCustomAudio(props => {
+    return (
+      <div className="border">
+        <PlayButton
+          className="sb-soundplayer-play-btn"
+          {...props} />
+      </div>
+    );
+});
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -31,6 +50,8 @@ const IndexPage = ({ data }) => (
         </div>
       </div>
     </nav>
+    <BackgroundSoundPlayer streamUrl={streamUrl}/>
+
     <div class="container" style={{marginTop: "150px", marginBottom: "70px"}}>
       <div class="row">
         <div class="col-lg-6 mb-4">
@@ -57,6 +78,7 @@ const IndexPage = ({ data }) => (
         </div>
       </div>
     </div>
+
     <Footer />
   </Layout>
 )
