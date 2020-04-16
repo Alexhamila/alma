@@ -1,6 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import {Link} from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Footer from "../components/footer";
@@ -10,7 +9,7 @@ const EquipePage = ({ data }) => (
     <SEO title="Accueil" />
         <nav class="navbar navbar-expand-lg navbar-dark shadow" style={{backgroundColor: "#1F1E29"}}>
             <div class="container">
-                <a class="navbar-brand" href="#">Alma</a>
+                <Link to="#" class="navbar-brand">Alma</Link>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>

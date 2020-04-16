@@ -1,15 +1,12 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import { PlayButton, Timer, VolumeControl } from 'react-soundplayer/components';
-import { Progress, Icons } from 'react-soundplayer/components';
-import { SoundPlayerContainer } from 'react-soundplayer/addons';
+import { PlayButton} from 'react-soundplayer/components';
 import { withCustomAudio } from 'react-soundplayer/addons';
 
 // audio source
 const streamUrl = 'http://clindoeilfm1061.ice.infomaniak.ch/clindoeilfm1061-128.mp3';
 // some track meta information
-const trackTitle = "Clin d'Oeil FM";
+// const trackTitle = "Clin d'Oeil FM";
 
 const BackgroundSoundPlayer = withCustomAudio(props => {
     return (

@@ -1,6 +1,11 @@
-.background-cinema {
+  .nav-link {
+    padding-top: 25px;
+  }  
+ 
+  .background-cinema {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 100vh;
+    min-height: 900px;
     background: "linear-gradient(to right,#0f0c29,#302b63,#24243e)"
   }
   .background-cinema-img {
@@ -53,7 +58,6 @@
     background-color: #4a62ff;
     border-color: #4a62ff;
     border-radius: 32px;
-    width: 17vw;
     height: 63px;
     margin-right: 20px;
   }
@@ -63,7 +67,6 @@
     border-color: #6dff4a;
     border-width: 4px;
     border-radius: 32px;
-    width: 17vw;
     height: 63px;
   }
   .modal-video {
@@ -101,17 +104,8 @@
   }
   
   @media screen and (max-height: 700px) {
-    .background-cinema {
-      min-height: 700px;
-    }
     .background-cinema-img {
-      min-height: 700px;
-    }
-    .background-cinema3 {
-      min-height: 700px;
-    }
-    .background-cinema4 {
-      min-height: 700px;
+      min-height: 900px;
     }
   }
   

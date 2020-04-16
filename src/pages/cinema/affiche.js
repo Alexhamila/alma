@@ -16,7 +16,7 @@ const AfficheCinema = ({ data }) =>  {
            {data.allStrapiAffiche.edges.map((document, index) => {
 
               console.log(index);
-              if(index == 0){
+              if(index === 0){
 
               var imgUrl_1 = document.node.AfficheFond.publicURL;
 
@@ -106,7 +106,7 @@ const AfficheCinema = ({ data }) =>  {
              );
             }else{
               
-              var imgUrl_1 = document.node.AfficheFond.publicURL;
+              // var imgUrl_1 = document.node.AfficheFond.publicURL;
 
               const img_1 = {
                 backgroundImage: 'url("' + imgUrl_1 + '")'

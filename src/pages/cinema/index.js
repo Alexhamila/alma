@@ -26,7 +26,7 @@ const IndexCinema = ({ data }) =>  {
           <div className="background-cinema-img" style={img_1}>
             <HeaderCinema active="1"></HeaderCinema>
             <div className="row affiche">
-              <div className="col-7">
+              <div className="col-10">
                 <div className="jumbotron jumbotron-fluid jumbotron-custom">
                   <div className="container">
                     <h1 className="display-4">
@@ -52,11 +52,11 @@ const IndexCinema = ({ data }) =>  {
                         { data.strapiCinema.Bouton2 }
                       </button>
                     </a>
-                  </div>
                 </div>
               </div>
             </div>
-          </div>
+            </div>
+            </div>
         </div>
         <div class="container page">
           <div class="row">

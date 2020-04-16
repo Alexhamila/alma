@@ -1,18 +1,16 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import {Link} from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Footer from "../components/footer";
-import { PlayButton, Timer, VolumeControl } from 'react-soundplayer/components';
-import { Progress, Icons } from 'react-soundplayer/components';
-import { SoundPlayerContainer } from 'react-soundplayer/addons';
+import { PlayButton } from 'react-soundplayer/components';
 import { withCustomAudio } from 'react-soundplayer/addons';
 
 // audio source
 const streamUrl = 'http://clindoeilfm1061.ice.infomaniak.ch/clindoeilfm1061-128.mp3';
 // some track meta information
-const trackTitle = "Clin d'Oeil FM";
+
+// const trackTitle = "Clin d'Oeil FM";
 
 const BackgroundSoundPlayer = withCustomAudio(props => {
     return (
@@ -36,15 +34,15 @@ const IndexPage = ({ data }) => (
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Accueil
+              <Link to="#" class="nav-link">Accueil
                     <span class="sr-only">(current)</span>
-                  </a>
+                  </Link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/radio/">Radio</a>
+              <Link to="radio" class="nav-link">Radio</Link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/cinema/">Alma Cinéma</a>
+              <Link to="cinema" class="nav-link">Alma Cinéma</Link>
             </li>
           </ul>
         </div>
