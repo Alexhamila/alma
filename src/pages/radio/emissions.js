@@ -39,8 +39,8 @@ const EmissionsRadio = ({ data }) =>  {
                 </div>
               </div>
             </div>
-            </div>
             <Footer />
+            </div>
     </Layout>
   )
 }
