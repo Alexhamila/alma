@@ -17,8 +17,8 @@ module.exports = {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: process.env.DEPLOY_URL
-          ? "http://localhost:1337"
-          : "http://localhost:1337",
+          ? "https://cryptic-ocean-83804.herokuapp.com"
+          : "https://cryptic-ocean-83804.herokuapp.com",
         contentTypes: [`cinema`, `affiche`, `emission`],
         queryLimit: 1000,
       },
