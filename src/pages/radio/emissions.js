@@ -4,7 +4,8 @@ import React from "react"
 import HeaderRadio from "../../components/headerradio";
 import "../../components/radio/index.css"
 import Footer from "../../components/footer";
-
+import ReactPlayer from "react-player"
+import { graphql } from "gatsby"
 
 const EmissionsRadio = ({ data }) =>  {
   return(
@@ -13,35 +14,40 @@ const EmissionsRadio = ({ data }) =>  {
       <div className="background-radio">
             <HeaderRadio active="2" ></HeaderRadio>
             <div class="container">
-              <div class="row emissions">
-                <div class="col-md-7">
-                  <a href="#">
-                    <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt=""/>
-                  </a>
+              {data.allStrapiEmission.edges.map((document, index) => {
+              return(
+                <div class="row emissions">
+                  <div class="col-md-7">
+                    <ReactPlayer url={document.node.lien} controls></ReactPlayer>
+                  </div>
+                  <div class="col-md-5">
+                    <h3>{document.node.Titre}</h3>
+                    <p>{document.node.Description}</p>
+                    <p>{document.node.date} | {document.node.Categorie}</p>
+                  </div>
                 </div>
-                <div class="col-md-5">
-                  <h3>Project Two</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
-                  <a class="btn btn-primary" href="#">View Project</a>
-                </div>
-              </div>
-
-              <div class="row emissions">
-                <div class="col-md-7">
-                  <a href="#">
-                    <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt=""/>
-                  </a>
-                </div>
-                <div class="col-md-5">
-                  <h3>Project Two</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
-                  <a class="btn btn-primary" href="#">View Project</a>
-                </div>
-              </div>
+              )
+              })}
             </div>
             <Footer />
-            </div>
+      </div>
     </Layout>
   )
 }
 export default EmissionsRadio
+
+export const query = graphql`
+  query EmissionsRadio {
+    allStrapiEmission(sort: {fields: id}, limit: 10) {
+      edges {
+        node {
+          date
+          Titre
+          Description
+          Categorie
+          lien
+        }
+      }
+    }
+  }
+`

@@ -1,5 +1,6 @@
 /* 300 Light 400 Regular 700 Bold */
-body {
+
+  body {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
   }
@@ -30,6 +31,26 @@ body {
   }
   #menu-chosen{
     opacity: 1;
+  }
+  .mobile{
+    text-align: center;
+    font-size: 2em !important;
+  }
+  .mobile-a{
+    color: white;
+    font-size: 0.6em !important;
+  }
+  .mobile-a2{
+    color: rgba(255,255,255,.5);
+    font-size: 0.6em !important;
+  }
+  .mobile-a3 a{
+    color: rgba(255,255,255,.5);
+  }
+  @media screen and (min-width: 992px) {
+    .collapse {
+      display: none;
+    }
   }
   @media screen and (max-width: 1425px) {
     .menu-a {

@@ -1,28 +1,15 @@
-import PropTypes from "prop-types"
 import React from "react"
 import "./cinema/header.css"
 
-const HeaderCinema = ({active}) => (
-  <header>
-    <nav className="navbar navbar-expand-lg navbar-dark bg-custom">
-      <a className="navbar-brand" href="/">
-        Alma
-      </a>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target=".navbar-collapse"
-      >
-      <span className="navbar-toggler-icon" />
-      </button>
-      <ul className="navbar-nav mr-auto menu-ul visible992">
+const HeaderCinemaMobile = ({ active }) => (
+      <div className="navbar-collapse collapse mobile" style={{backgroundColor: "#1F1E29"}}>
+        <ul className="navbar-nav mr-auto menu-ul">
           <li className="nav-item menu-il">
             <Active
               page="1"
               title="ACCUEIL"
               href="/cinema/"
-              active={active}
+              active={active} 
             />
           </li>
           <li className="nav-item menu-il">
@@ -74,11 +61,10 @@ const HeaderCinema = ({active}) => (
             />
           </li>
         </ul>
-        <span className="navbar-text visible992">
-            <a className="menu-choice" href="/radio">RADIO</a> | <a className="menu-choice" id="menu-chosen" href="/cinema">CINEMA</a>
+        <span className="navbar-text mobile-a3">
+          <a className="menu-choice" href="/radio">RADIO</a> | <a className="menu-choice" id="menu-chosen" href="/cinema">CINEMA</a>
         </span>
-    </nav>
-  </header>
+      </div>
 )
 
 class Active extends React.Component {
@@ -89,13 +75,13 @@ class Active extends React.Component {
     const href = this.props.href;
     if (page === active) {
       return (
-        <a className={"nav-link menu-a active"} href={href}>
+        <a className={"nav-link menu-a mobile-a active"} href={href}>
           {title}
         </a>
       );
     } else {
       return (
-        <a className={"nav-link menu-a"} href={href}>
+        <a className={"nav-link mobile-a2 menu-a"} href={href}>
           {title}
         </a>
       );
@@ -103,12 +89,5 @@ class Active extends React.Component {
   }
 }
 
-HeaderCinema.propTypes = {
-  siteTitle: PropTypes.string,
-}
 
-HeaderCinema.defaultProps = {
-  siteTitle: ``,
-}
-
-export default HeaderCinema
+export default HeaderCinemaMobile

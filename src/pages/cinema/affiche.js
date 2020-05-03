@@ -6,12 +6,15 @@ import { graphql } from "gatsby"
 import "../../components/cinema/index.css"
 import HeaderCinema from "../../components/headercinema"
 import Footer from "../../components/footer";
+import HeaderCinemaMobile from "../../components/headercinemamobile"
 
 const AfficheCinema = ({ data }) =>  {
   return(
     <Layout>
         <SEO title="Accueil"></SEO>
         <div className="cinema">
+
+          <HeaderCinemaMobile active="1"></HeaderCinemaMobile>
           
            {data.allStrapiAffiche.edges.map((document, index) => {
 
@@ -62,7 +65,7 @@ const AfficheCinema = ({ data }) =>  {
                 </div>
 
                 <div className="row affiche">
-                <div className="col-7">
+                <div className="col-sm-7">
                     <div className="jumbotron jumbotron-fluid jumbotron-custom">
                     <div className="container">
                         <h1 className="display-4">

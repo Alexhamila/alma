@@ -7,6 +7,7 @@ import "../../components/cinema/index.css"
 import HeaderCinema from "../../components/headercinema"
 import ReactMarkdown from "react-markdown"  
 import Footer from "../../components/footer";
+import HeaderCinemaMobile from "../../components/headercinemamobile"
 
 var imgUrl_1 = "/images/15817793814528480.png";
     const img_1 = {
@@ -22,11 +23,12 @@ const ScolaireCinema = ({ data }) =>  {
     <Layout header="cinema">
     <SEO title="Accueil"></SEO>
       <div className="cinema">
+        <HeaderCinemaMobile active="5"></HeaderCinemaMobile>
         <div className="background-cinema" style={background_gradient}>
           <div className="background-cinema-img" style={img_1}>
             <HeaderCinema active="5"></HeaderCinema>
             <div className="row affiche">
-              <div className="col-7">
+              <div className="col-lg-10">
                 <div className="jumbotron jumbotron-fluid jumbotron-custom">
                   <div className="container">
                     <h1 className="display-4">

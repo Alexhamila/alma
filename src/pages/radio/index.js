@@ -4,7 +4,8 @@ import React from "react"
 import HeaderRadio from "../../components/headerradio";
 import "../../components/radio/index.css"
 import Footer from "../../components/footer";
-
+import ReactPlayer from "react-player"
+import { graphql } from "gatsby"
 
 const IndexRadio = ({ data }) =>  {
   return(
@@ -40,6 +41,16 @@ const IndexRadio = ({ data }) =>  {
                     dolore eu fugiat nulla pariatur.</p>
                 </div>
               </div>
+              {data.allStrapiEmission.edges.map((document, index) => {
+              return(
+                <>
+                  <h3>{document.node.Titre}</h3>
+                  <p>{document.node.date} | {document.node.Categorie}</p>
+                  <p>{document.node.Description}</p>
+                  <ReactPlayer url={document.node.lien} controls></ReactPlayer>
+                </>
+              )
+              })}
             </div>
             <Footer />
         </div>
@@ -47,3 +58,20 @@ const IndexRadio = ({ data }) =>  {
   )
 }
 export default IndexRadio
+
+
+export const query = graphql`
+  query IndexRadio {
+    allStrapiEmission(sort: {fields: date}, limit: 1) {
+      edges {
+        node {
+          date
+          Titre
+          Description
+          Categorie
+          lien
+        }
+      }
+    }
+  }
+`
