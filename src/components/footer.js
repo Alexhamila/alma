@@ -27,7 +27,7 @@ const Footer = () => (
             <h5 style={{color: 'white'}}>Radio</h5>
             <li><Link className="text-muted" to="/radio/">Accueil</Link></li>
             <li><Link className="text-muted" to="/radio/emissions/">Emissions</Link></li>
-            <li><Link className="text-muted" to="/radio/gallerie/">Gallerie</Link></li>
+            <li><Link className="text-muted" to="/radio/images/">Gallerie</Link></li>
             <li><Link className="text-muted" to="/radio/podcasts/">Podcasts</Link></li>
             <li><Link className="text-muted" to="/radio/partenaires/">Partenaires</Link></li>
           </ul>

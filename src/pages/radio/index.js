@@ -41,17 +41,28 @@ const IndexRadio = ({ data }) =>  {
                     dolore eu fugiat nulla pariatur.</p>
                 </div>
               </div>
-              {data.allStrapiEmission.edges.map((document, index) => {
+              
+            {data.allStrapiEmission.edges.map((document, index) => {
               return(
                 <>
-                  <h3>{document.node.Titre}</h3>
-                  <p>{document.node.date} | {document.node.Categorie}</p>
-                  <p>{document.node.Description}</p>
-                  <ReactPlayer url={document.node.lien} controls></ReactPlayer>
+                  <blockquote class="blockquote text-center">
+                    <h1 class="display-5">{document.node.Titre}</h1>
+                    <footer class="blockquote-footer"><cite title="Source Title">{document.node.Date}</cite> | {document.node.Categorie}<br/>{document.node.Description}</footer>
+                  </blockquote>
+
+                  <ReactPlayer url={document.node.Link} className="responsive-player" controls></ReactPlayer>
                 </>
               )
               })}
+              <blockquote class="blockquote text-center">
+                <h1 class="display-3">Où nous trouver ?</h1>
+                <footer class="blockquote-footer"><cite title="Source Title">Centre International de Valbonne</cite> | 06560 France</footer>
+              </blockquote>
+              
+              <iframe title="mapindex" width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=7.038443684577943%2C43.61912207338791%2C7.042552828788758%2C43.62133564230126&amp;layer=mapnik" class="mapepic"></iframe>
+              <br/><small><a href="https://www.openstreetmap.org/#map=18/43.62023/7.04050">Afficher une carte plus grande</a></small>
             </div>
+
             <Footer />
         </div>
     </Layout>
@@ -62,14 +73,14 @@ export default IndexRadio
 
 export const query = graphql`
   query IndexRadio {
-    allStrapiEmission(sort: {fields: date}, limit: 1) {
+    allStrapiEmission(sort: {fields: Date order: DESC}, limit: 1) {
       edges {
         node {
-          date
+          Date
           Titre
           Description
           Categorie
-          lien
+          Link
         }
       }
     }

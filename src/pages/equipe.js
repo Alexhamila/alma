@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import Footer from "../components/footer";
 
 const EquipePage = ({ data }) => (
-  <Layout>
+    <Layout>
     <SEO title="Accueil" />
         <nav class="navbar navbar-expand-lg navbar-dark shadow" style={{backgroundColor: "#1F1E29"}}>
             <div class="container">
@@ -28,25 +28,37 @@ const EquipePage = ({ data }) => (
                 </div>
             </div>
         </nav>
-        <div className="container" style={{paddingTop: "50px"}}>
-            <div className="jumbotron">
-                <h1 class="display-4">Notre Equipe:</h1>
-                <p>VICENT Rodolphe (Président)
-GAUVRIT Frédéric (Vice-président, en charge de la radio)
-SILVANO Jacques (Vice-Président responsable du cinéma)
-BELDA Aurélien (Secrétaire)
-BUFFET Renée (Trésorière)
-PIERRARD Mélanie (Trésorière-adjointe)
-MIRTAIN Carol (Trésorière-adjointe)
-GORDON Maité (en charge du cinéma scolaire)
-CHARVET Frédéric (en charge des Opéras/Ballets)
-JONES Karen (Théâtre en anglais)
-CAPOLONGO Anne-Laure (adhésions)
-RUNFOLA Pierre-Yves (Cinéma)</p>
+        <div className="background-mystere">
+            <div className="container" style={{paddingTop: "50px"}}>
+                <div className="jumbotron">
+                    <h1 class="display-4" style={{textAlign: "center", maxWidth: "100%"}}>Notre Equipe</h1>
+                    <div class="row">
+                        <div class="col-xl-6 col-md-12">
+                            <ul class="list-group">
+                                <li class="list-group-item">VICENT Rodolphe <strong>(Président)</strong></li>
+                                <li class="list-group-item">GAUVRIT Frédéric <strong>(Vice-président | RADIO)</strong></li>
+                                <li class="list-group-item">SILVANO Jacques <strong>(Vice-Président | CINEMA)</strong></li>
+                                <li class="list-group-item">BELDA Aurélien <strong>(Secrétaire)</strong></li>
+                                <li class="list-group-item">BUFFET Renée <strong>(Trésorière)</strong></li>
+                                <li class="list-group-item" >PIERRARD Mélanie <strong>(Trésorière-adjointe)</strong></li>    
+                            </ul>
+                        </div>
+                        <div class="col-xl-6 col-md-12">
+                            <ul class="list-group">
+                                <li class="list-group-item">MIRTAIN Carol <strong>(Trésorière-adjointe)</strong></li>
+                                <li class="list-group-item">GORDON Maité <strong>(en charge du cinéma scolaire)</strong></li>
+                                <li class="list-group-item">CHARVET Frédéric <strong>(en charge des Opéras/Ballets)</strong></li>
+                                <li class="list-group-item">JONES Karen <strong>(Théâtre en anglais)</strong></li>
+                                <li class="list-group-item">CAPOLONGO Anne-Laure <strong>(Adhésions)</strong></li>
+                                <li class="list-group-item">RUNFOLA Pierre-Yves <strong>(Cinéma)</strong></li>
+                            </ul>
+                        </div>  
+                    </div>
+                </div>
             </div>
-            
         </div>
+        
     <Footer />
-  </Layout>
+    </Layout>
 )
 export default EquipePage

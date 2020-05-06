@@ -80,7 +80,7 @@ const HeaderRadio = ({ active }) => (
             <li className="nav-item menu-il">
               <Active
                 page="5"
-                title="PHOTOS/VIDEOS"
+                title="GALLERIE"
                 href="/radio/images/"
                 active={active}
               />

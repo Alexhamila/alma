@@ -2,6 +2,10 @@
     margin-top: 80px;
     margin-bottom: 40px;
   }
+  .responsive-player{
+    height: auto !important;
+    width: auto !important;
+  }
   .background-radio {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 100vh;
@@ -427,6 +431,11 @@
     width: 80vw;
     height: 100%;
   }
+  .mapepic {
+    border-radius: 1%;
+    box-shadow: 0px 3px 7px #000000;
+  }
+
   @media screen and (max-width: 991px) {
     .btn-primary-custom {
       font-size: 2vw;
