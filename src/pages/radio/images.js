@@ -11,7 +11,7 @@ const ImagesRadio = ({ data }) =>  {
     <Layout>
     <SEO title="Accueil"></SEO> 
       <div className="background-radio">
-            <HeaderRadio active="5" ></HeaderRadio>
+            <HeaderRadio active="4" ></HeaderRadio>
             <div className="jumbotron jumbotron-radio" style={{padding:"1rem 2rem"}}>
               <p className="jumbotron-title" style={{marginBottom:"0rem"}}>Gallerie</p>
             </div>
