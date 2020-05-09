@@ -67,7 +67,6 @@ const IndexRadio = ({ data }) =>  {
                 </blockquote>
                 
                 <iframe title="mapindex" width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=7.038443684577943%2C43.61912207338791%2C7.042552828788758%2C43.62133564230126&amp;layer=mapnik" class="mapepic"></iframe>
-                <br/><small><a href="https://www.openstreetmap.org/#map=18/43.62023/7.04050">Afficher une carte plus grande</a></small>
               </div>
 
             
