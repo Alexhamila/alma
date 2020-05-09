@@ -28,7 +28,6 @@ const Footer = () => (
             <li><Link className="text-muted" to="/radio/">Accueil</Link></li>
             <li><Link className="text-muted" to="/radio/emissions/">Emissions</Link></li>
             <li><Link className="text-muted" to="/radio/images/">Gallerie</Link></li>
-            <li><Link className="text-muted" to="/radio/podcasts/">Podcasts</Link></li>
             <li><Link className="text-muted" to="/radio/partenaires/">Partenaires</Link></li>
           </ul>
         </div>

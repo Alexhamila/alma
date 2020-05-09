@@ -72,14 +72,6 @@ const HeaderRadio = ({ active }) => (
             <li className="nav-item menu-il">
               <Active
                 page="4"
-                title="PODCASTS"
-                href="/radio/podcasts/"
-                active={active}
-              />
-            </li>
-            <li className="nav-item menu-il">
-              <Active
-                page="5"
                 title="GALLERIE"
                 href="/radio/images/"
                 active={active}

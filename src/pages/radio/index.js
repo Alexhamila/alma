@@ -18,11 +18,10 @@ const IndexRadio = ({ data }) =>  {
               <div className="container">
                 <p className="lead">Disponible partout dans les Alpes-Maritimes sur la Fréquence 106.1FM</p>
                 <p>Clin d'Oeil FM a pour mission première de diffuser toute information susceptible d'intéresser les jeunes et notamment les 2300 élèves du Centre International de Valbonne, les actifs, les demandeurs d'emploi, les habitants et les différents acteurs institutionnels, économiques ou associatifs de la commune  de Valbonne et de la technopole de Sophia-Antipolis. </p>
-                <button type="button" className="btn btn-primary btn-primary-custom" style={{ backgroundColor: '#2A2A2A',   borderColor: '#2A2A2A' }}>Podcasts</button>
                 <button type="button" className="btn btn-primary btn-primary-custom" style={{ backgroundColor: '#CC3500',   borderColor: '#CC3500' }}>Emissions</button>
               </div>
             </div>
-            <div className="container" style={{paddingBottom: '100px'}}>
+            <div className="container" style={{paddingBottom: '70px'}}>
               <div className="row">
                 <div className="col-sm">
                   <h3>Qui sommes nous ?</h3>
@@ -41,28 +40,37 @@ const IndexRadio = ({ data }) =>  {
                     dolore eu fugiat nulla pariatur.</p>
                 </div>
               </div>
+            </div>
+
               
             {data.allStrapiEmission.edges.map((document, index) => {
               return(
-                <>
-                  <blockquote class="blockquote text-center">
-                    <h1 class="display-5">{document.node.Titre}</h1>
-                    <footer class="blockquote-footer"><cite title="Source Title">{document.node.Date}</cite> | {document.node.Categorie}<br/>{document.node.Description}</footer>
-                  </blockquote>
+                <><div className="jumbotron jumbotron-radio" style={{paddingBottom: "1rem"}}>
+                    <div class="container">
+                      <blockquote class="blockquote text-center">
+                        <h3 style={{marginTop: "1.45rem"}}><span class="badge badge-info">Dernière émission</span> {document.node.Titre}</h3>
+                        <footer class="blockquote-footer"><cite title="Source Title">{document.node.Date}</cite> | {document.node.Categorie}<br/>{document.node.Description}</footer>
+                      </blockquote>
 
-                  <ReactPlayer url={document.node.Link} className="responsive-player" controls></ReactPlayer>
+                      <ReactPlayer url={document.node.Link} className="responsive-player" controls></ReactPlayer>                       
+                    </div>
+                 
+                  </div>
+
                 </>
               )
               })}
-              <blockquote class="blockquote text-center">
-                <h1 class="display-3">Où nous trouver ?</h1>
-                <footer class="blockquote-footer"><cite title="Source Title">Centre International de Valbonne</cite> | 06560 France</footer>
-              </blockquote>
-              
-              <iframe title="mapindex" width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=7.038443684577943%2C43.61912207338791%2C7.042552828788758%2C43.62133564230126&amp;layer=mapnik" class="mapepic"></iframe>
-              <br/><small><a href="https://www.openstreetmap.org/#map=18/43.62023/7.04050">Afficher une carte plus grande</a></small>
-            </div>
+              <div class="container">
+                <blockquote class="blockquote text-center">
+                  <h1 class="display-3">Où nous trouver ?</h1>
+                  <footer class="blockquote-footer"><cite title="Source Title">Centre International de Valbonne</cite> | 06560 France</footer>
+                </blockquote>
+                
+                <iframe title="mapindex" width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=7.038443684577943%2C43.61912207338791%2C7.042552828788758%2C43.62133564230126&amp;layer=mapnik" class="mapepic"></iframe>
+                <br/><small><a href="https://www.openstreetmap.org/#map=18/43.62023/7.04050">Afficher une carte plus grande</a></small>
+              </div>
 
+            
             <Footer />
         </div>
     </Layout>
