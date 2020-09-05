@@ -38,13 +38,6 @@ const ComedieCinema = ({ data }) =>  {
                     { data.strapiCinema.Description }
                     </p>
 
-                    <button
-                      type="button"
-                      className="btn btn-primary btn-primary-custom"
-                      style={{ backgroundColor: '#3573B9',   borderColor: '#3573B9' }}
-                    >
-                      { data.strapiCinema.Bouton1 }
-                    </button>
                   </div>
                 </div>
               </div>

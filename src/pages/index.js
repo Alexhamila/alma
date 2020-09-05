@@ -54,23 +54,21 @@ const IndexPage = ({ data }) => (
       <div class="row">
         <div class="col-lg-6 mb-4">
           <div class="card h-100">
-            <a href="/radio/"><img class="card-img-top" src="https://res.cloudinary.com/almaciv/image/upload/v1584807478/Webp.net-resizeimage_p973o6.png" alt=""/></a>
+            <a href="/radio/"><img class="card-img-top" src="https://res.cloudinary.com/almaciv/image/upload/v1599339932/Logo_Radio-Alma_Yellow_vignette_gealyi.png" alt=""/></a>
             <div class="card-body">
               <h4 class="card-title">
                 <a href="/radio/">Clin d'Oeil FM</a>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
             </div>
           </div>
         </div>
         <div class="col-lg-6 mb-4">
           <div class="card h-100">
-            <a href="/cinema/"><img class="card-img-top" src="https://res.cloudinary.com/almaciv/image/upload/v1583618131/dhyrfdgycpysx4vtou1u.jpg" alt=""/></a>
+            <a href="/cinema/"><img class="card-img-top" src="https://res.cloudinary.com/almaciv/image/upload/v1599339931/Logo_CInema-Alma_Blue_vignette_pt5ft9.png" alt=""/></a>
             <div class="card-body">
               <h4 class="card-title">
                 <a href="/cinema">Cinéma Alma</a>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquam aperiam nulla perferendis dolor nobis numquam, rem expedita, aliquid optio, alias illum eaque. Non magni, voluptates quae, necessitatibus unde temporibus.</p>
             </div>
           </div>
         </div>

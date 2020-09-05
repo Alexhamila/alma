@@ -77,12 +77,6 @@ const AfficheCinema = ({ data }) =>  {
 
                         <button
                         type="button"
-                        className="btn btn-primary btn-primary-custom"
-                        >
-                        En Savoir Plus
-                        </button>
-                        <button
-                        type="button"
                         className="btn btn-secondary btn-secondary-custom"
                         data-toggle="modal"
                         data-target="#exampleModalCenter"
@@ -109,7 +103,7 @@ const AfficheCinema = ({ data }) =>  {
              );
             }else{
               
-              // var imgUrl_1 = document.node.AfficheFond.publicURL;
+              var imgUrl_1 = document.node.AfficheFond.publicURL;
 
               const img_1 = {
                 backgroundImage: 'url("' + imgUrl_1 + '")'
@@ -163,12 +157,6 @@ const AfficheCinema = ({ data }) =>  {
                             {document.node.Description}
                             </p>
     
-                            <button
-                            type="button"
-                            className="btn btn-primary btn-primary-custom"
-                            >
-                            En Savoir Plus
-                            </button>
                             <button
                             type="button"
                             className="btn btn-secondary btn-secondary-custom"

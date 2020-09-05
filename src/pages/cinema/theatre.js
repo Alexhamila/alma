@@ -38,13 +38,6 @@ const TheatreCinema = ({ data }) =>  {
                     { data.strapiCinema.Description }
                     </p>
 
-                    <button
-                      type="button"
-                      className="btn btn-primary btn-primary-custom"
-                      style={{ backgroundColor: '#C2BD20',   borderColor: '#C2BD20' }}
-                    >
-                      { data.strapiCinema.Bouton1 }
-                    </button>
                   </div>
                 </div>
               </div>

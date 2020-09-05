@@ -37,14 +37,6 @@ const PaiementCinema = ({ data }) =>  {
                     <p className="lead jumbotron-text">
                     { data.strapiCinema.Description }
                     </p>
-
-                    <button
-                      type="button"
-                      className="btn btn-primary btn-primary-custom"
-                      style={{ backgroundColor: '#B93573',   borderColor: '#B93573' }}
-                    >
-                      { data.strapiCinema.Bouton1 }
-                    </button>
                   </div>
                 </div>
               </div>

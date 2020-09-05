@@ -37,19 +37,11 @@ const IndexCinema = ({ data }) =>  {
                     <p className="lead jumbotron-text">
                     { data.strapiCinema.Description }
                     </p>
-
-                    <button
-                      type="button"
-                      className="btn btn-primary btn-primary-custom"
-                      style={{ backgroundColor: '#A81D1D',   borderColor: '#A81D1D' }}
-                    >
-                      { data.strapiCinema.Bouton1 }
-                    </button>
                     <a href="/cinema/affiche/">
                       <button
                         type="button"
-                        className="btn btn-secondary btn-secondary-custom"
-                        style={{ borderColor: '#A81D2B'}}
+                        className="btn btn-primary btn-primary-custom"
+                        style={{ backgroundColor: '#A81D1D',   borderColor: '#A81D1D' }}
                       >
                         { data.strapiCinema.Bouton2 }
                       </button>
@@ -63,7 +55,14 @@ const IndexCinema = ({ data }) =>  {
         <div class="container page">
           <div class="row">
             <div class="col-md-8 mx-auto" style={{marginTop: "30px"}}>
+
             <ReactMarkdown source={data.strapiCinema.Page} transformImageUri={uri => uri.startsWith('http') ? uri : `${process.env.IMAGE_BASE_URL}${uri}`} />
+                <blockquote class="blockquote text-center">
+                  <h1 class="display-3">Où nous trouver ?</h1>
+                  <footer class="blockquote-footer"><cite title="Source Title">Centre International de Valbonne</cite> | 06560 France</footer>
+                </blockquote>
+                
+                <iframe title="mapindex" width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=7.038443684577943%2C43.61912207338791%2C7.042552828788758%2C43.62133564230126&amp;layer=mapnik" class="mapepic"></iframe>
             </div>
           </div>
         </div>

@@ -37,14 +37,6 @@ const BalletsCinema = ({ data }) =>  {
                     <p className="lead jumbotron-text">
                     { data.strapiCinema.Description }
                     </p>
-
-                    <button
-                      type="button"
-                      className="btn btn-primary btn-primary-custom"
-                      style={{ backgroundColor: '#B96235',   borderColor: '#B96235' }}
-                    >
-                      { data.strapiCinema.Bouton1 }
-                    </button>
                   </div>
                 </div>
               </div>
